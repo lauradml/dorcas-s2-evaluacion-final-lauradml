@@ -2,4 +2,13 @@ body {
   height: 100vh;
 }
 
+.caja-li {
+  background-color: #ff66cc;
+  list-style: none;
+}
+
+.favoritos {
+  background-color: green;
+}
+
 /*# sourceMappingURL=main.css.map */
