@@ -32,11 +32,7 @@ function listFilms(){
         // creo un evento para todos los li y la funcion  la tengo abajo
         lista.addEventListener("click", cambiarColor);
 
-        // para el titulo
-        var tituloSerie= document.createElement('h2');
-        var content = document.createTextNode(series[i].show.name);
-        tituloSerie.appendChild(content);
-        lista.appendChild(tituloSerie);
+
         // para la imagen
         var imageSerie= document.createElement('img');
         if(series[i].show.image === null){
@@ -45,15 +41,19 @@ function listFilms(){
         }else{
           imageSerie.src= series[i].show.image.medium;
         }
+        // para el titulo
+        var tituloSerie= document.createElement('h2');
+        var content = document.createTextNode(series[i].show.name);
 
+        tituloSerie.appendChild(content);
         lista.appendChild(imageSerie);
+        lista.appendChild(tituloSerie);
+
         // para meter el li en el lu
         filmUl.appendChild(lista);
 
       }
-
     });
-
 // funcion que añade o quita la clase para favorito
   function cambiarColor(event) {
     event.currentTarget.classList.toggle('favoritos');
