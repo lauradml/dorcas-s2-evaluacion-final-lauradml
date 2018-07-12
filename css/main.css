@@ -2,13 +2,57 @@ body {
   height: 100vh;
 }
 
+.titulo-principal {
+  font-family: arial;
+  text-align: center;
+}
+
+.contenedor {
+  text-align: center;
+}
+
+.button {
+  background: #b30000;
+  border-style: none;
+  color: #ffffff;
+  width: 78px;
+  height: 25px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.input {
+  width: 300px;
+  border-style: none;
+  border-bottom: 2px solid black;
+  font-size: 16px;
+}
+
+.films-ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 15px;
+  padding: 0px;
+  color: #993366;
+  font-family: arial;
+  font-weight: bold;
+}
+
 .caja-li {
-  background-color: #ff66cc;
+  background-color: #ffcce6;
   list-style: none;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 30px;
 }
 
 .favoritos {
-  background-color: green;
+  background: -webkit-gradient(linear, left top, left bottom, from(#cc9900), to(#ffffb3));
+  background: linear-gradient(#cc9900, #ffffb3);
+  list-style: none;
+  border-style: dashed;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /*# sourceMappingURL=main.css.map */
