@@ -5,6 +5,7 @@ console.log('>> Ready :)');
 var button = document.querySelector('.button');
 var input = document.querySelector('.input');
 var filmUl = document.querySelector('.films-ul');
+var parrafo= document.querySelector('.anadir-likes');
 
 
 // var fotoFilms= document.querySelector('.foto');
@@ -31,6 +32,9 @@ function listFilms(){
         lista.classList.add('caja-li');
         // creo un evento para todos los li y la funcion  la tengo abajo
         lista.addEventListener("click", cambiarColor);
+        lista.addEventListener("click", anadir);
+
+
 
 
         // para la imagen
@@ -58,7 +62,12 @@ function listFilms(){
   function cambiarColor(event) {
     event.currentTarget.classList.toggle('favoritos');
   }
+function anadir(event){
+parrafo.innerHTML='me gusta '+ event.currentTarget.querySelector('h2').innerHTML;
 }
+}
+function crearParrafo (evento){
 
+}
 
 button.addEventListener('click', listFilms);
