@@ -1,6 +1,5 @@
 'use strict';
 
-console.log('>> Ready :)');
 
 var button = document.querySelector('.button');
 var input = document.querySelector('.input');
@@ -13,16 +12,15 @@ var parrafo= document.querySelector('.anadir-likes');
 
 
 function listFilms(){
-  filmUl.innerHTML=' ' ;
-  var film= 'http://api.tvmaze.com/search/shows?q=' +  input.value;
+
+  filmUl.innerHTML='' ;
+  var film= 'https://api.tvmaze.com/search/shows?q=' +  input.value;
   fetch(film)
     .then(function(response){
       return response.json();
 
     })
     .then(function(json){
-    // console.log(json[1].show);
-    // console.log(json[1].show.image);
     // con esta variable mi json se llama series
       var series = json
       for (var i = 0; i < series.length; i++){
